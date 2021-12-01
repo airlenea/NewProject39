@@ -1,7 +1,7 @@
 const models = require('../models/funcionariosModels.js');
 
 module.exports = {
-    //   funcionariosMenu,
+    funcionariosMenu,
     funcionariosGetAll,
     funcionariosGetById,
     funcionariosAtivoInativo,
@@ -9,7 +9,7 @@ module.exports = {
     funcionariosEditar,
 }
 
-function funcionariosMenu(req, res) {
+function funcionariosMenu (req, res) {
     res.json('Rota Funcionarios Encontrada!!!');
     console.log('Rota Funcionarios Encontrada!!!');
 }
@@ -64,7 +64,7 @@ function funcionariosAtivoInativo(req, res) {
                 throw err
             }
             console.log("Registro Atualizado!!!")
-            //            res.redirect('/autores/consultar/' + id);
+            //            res.redirect('/funcionarios/consultar/' + id);
         })
     })
 }

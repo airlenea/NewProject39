@@ -21,15 +21,15 @@ export default function Tabela(props) {
       return (
         <tr className={i % 2 === 0 ? "par" : "impar"} key={item.fun_codigo}>
           <td> {item.fun_codigo} </td>
+          <td> {status} </td>
           <td> {item.fun_nome} </td>
           <td> {item.fun_cargo} </td>
-          <td> {status} </td>
           <td> {item.fun_depto} </td>
           <td> {item.fun_registro} </td>
          
-          <td id="editar"> <a className="btn btn-primary btn-block" href={props.chave + item.aut_codigo} > Editar </a></td>
-          <td id="ativar"> <a className="btn btn-danger btn-block" href={props.chave + item.aut_codigo} > Inativar </a></td>
-          <td> <Link to={props.chave + item.aut_codigo}> <i className="bi bi-clipboard-data"> </i> </Link> </td>
+          <td id="editar"> <a className="btn btn-primary btn-block" href={props.chave + item.fun_codigo} > Editar </a></td>
+          <td id="ativar"> <a className="btn btn-danger btn-block" href={props.chave + item.fun_codigo} > Inativar </a></td>
+          <td> <Link to={props.chave + item.fun_codigo}> <i className="bi bi-clipboard-data"> </i> </Link> </td>
 
           <td> <i className="bi bi-trash"></i> </td>
         </tr>
@@ -43,16 +43,18 @@ export default function Tabela(props) {
         <thead id="cabecalho_rel">
           <tr style={{ textAlign: 'left' }}>
             <th scope="col"> Código </th>
+            <th scope="col"> Ativo/Inativo </th>
             <th scope="col"> Nome </th>
             <th scope="col"> Cargo </th>
-            <th scope="col"> Ativo/Inativo </th>
             <th scope="col"> Depto </th>
             <th scope="col"> Registro </th>
             <th scope="col"><a href={props.chave + '0'} className="btn btn-success btn-block">Novo Funcionario</a></th>
           </tr>
         </thead>
         <tbody>
-          {getLinhas()}
+            
+           
+
         </tbody>
       </table>
     </div>

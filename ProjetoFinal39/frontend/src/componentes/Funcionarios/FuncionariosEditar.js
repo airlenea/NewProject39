@@ -17,7 +17,7 @@ export default function FuncionariosEditar() {
     const [nome, setNome] = useState('');
     const [ativoInativo, setAtivo] = useState('');
     const [cargo, setCargo] = useState('');
-    const [depto, setdepto] = useState('');
+    const [depto, setDepto] = useState('');
     const [registro, setRegistro] = useState('');
     
     const [checked, setChecked] = useState(false);
@@ -43,10 +43,9 @@ export default function FuncionariosEditar() {
                 setChecked(true);
             } else {
                 try {
-                    const { data } = await urlapi.get('/funcionarios/' + idFuncionario);
+                    const { data } = await urlapi.get('/funcionarios/' + codigo);
                     console.log(data)                    
-                    setFuncionario(data);
-
+                    setFuncionarios(data);
                     setCodigo(data.fun_codigo);                    
                     setNome(data.fun_nome);
                     setAtivo(data.fun_ativoinativo);
@@ -88,7 +87,7 @@ export default function FuncionariosEditar() {
                 if (idBoolean) {
                     await urlapi.post('funcionarios', data);
                 } else {
-                    await urlapi.put('/funcionarios/' + idFuncionario, data);
+                    await urlapi.put('/funcionarios/' + codigo, data);
                 }
                 
                 history.push('/funcionarios');
@@ -107,7 +106,7 @@ export default function FuncionariosEditar() {
             </main>
             <section className="sectionTable" >
 
-                <form className="form--funcionario" onSubmit={handleFuncionarios} >
+                <form className="form-funcionario" onSubmit={handleFuncionario} >
                     <div className="form-row">
                         <div className="col-md-1 offset-md-1">
                             <label> Código </label>
