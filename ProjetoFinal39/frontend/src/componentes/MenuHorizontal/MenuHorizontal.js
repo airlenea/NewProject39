@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 import AreaDados from '../AreaDados/AreaDados.js'
-import Autores from '../Autores/Autores';
+import Funcionarios from '../Funcionarios/Funcionarios.js';
 import MenuBotoes from '../MenuBotoes/MenuBotoes.js'
 
 import './MenuHorizontal.css';
@@ -20,9 +20,8 @@ export default function MenuHorizontal() {
           <nav className="navMenu">
             <ul>
               <li> <Link to="/"> Início </Link> </li>
-              <li> <Link to="/autores"> Autores   </Link> </li>
-              <li> <Link to="/editoras"> Editoras </Link> </li>
-              <li> <Link to="/livros"> Livros </Link> </li>
+              <li> <Link to="/funcionarios"> Funcionarios   </Link> </li>
+              <li> <Link to="/prefeituras"> Prefeituras </Link> </li>
               <li> <Link to="/usuarios"> Usuários </Link> </li>
               <li> <Link to="/configuracoes"> Configurações </Link> </li>
             </ul>

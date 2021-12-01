@@ -12,22 +12,21 @@ export default function Tabela(props) {
 
     return arrayRegistros.map((item, i) => {
       let status = '';
-      if (item.aut_ativoinativo === 'A') {
+      if (item.fun_ativoinativo === 'A') {
         status = 'Ativo'
       } else {
         status = 'Inativo'
       }
 
       return (
-        <tr className={i % 2 === 0 ? "par" : "impar"} key={item.aut_codigo}>
-          <td> {item.aut_codigo} </td>
-          <td> {item.aut_nome} </td>
-          <td> {item.aut_apelido} </td>
+        <tr className={i % 2 === 0 ? "par" : "impar"} key={item.fun_codigo}>
+          <td> {item.fun_codigo} </td>
+          <td> {item.fun_nome} </td>
+          <td> {item.fun_cargo} </td>
           <td> {status} </td>
-          <td> {item.aut_sexo} </td>
-          <td> {item.aut_telefone} </td>
-          <td> {item.aut_email} </td>
-
+          <td> {item.fun_depto} </td>
+          <td> {item.fun_registro} </td>
+         
           <td id="editar"> <a className="btn btn-primary btn-block" href={props.chave + item.aut_codigo} > Editar </a></td>
           <td id="ativar"> <a className="btn btn-danger btn-block" href={props.chave + item.aut_codigo} > Inativar </a></td>
           <td> <Link to={props.chave + item.aut_codigo}> <i className="bi bi-clipboard-data"> </i> </Link> </td>
@@ -45,12 +44,11 @@ export default function Tabela(props) {
           <tr style={{ textAlign: 'left' }}>
             <th scope="col"> Código </th>
             <th scope="col"> Nome </th>
-            <th scope="col"> Apelido </th>
+            <th scope="col"> Cargo </th>
             <th scope="col"> Ativo/Inativo </th>
-            <th scope="col"> Sexo </th>
-            <th scope="col"> Telefone </th>
-            <th scope="col"> E-mail </th>
-            <th scope="col"><a href={props.chave + '0'} className="btn btn-success btn-block">Novo Autor</a></th>
+            <th scope="col"> Depto </th>
+            <th scope="col"> Registro </th>
+            <th scope="col"><a href={props.chave + '0'} className="btn btn-success btn-block">Novo Funcionario</a></th>
           </tr>
         </thead>
         <tbody>

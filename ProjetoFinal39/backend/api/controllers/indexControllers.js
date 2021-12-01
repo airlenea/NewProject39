@@ -7,8 +7,8 @@ module.exports = {
 }
 
 function indexControllers(req, res) {
-    res.json('Rota Raiz do Projeto Livros Encontrada!!!');
-    console.log('Rota Raiz do Projeto Livros Encontrada!!!');
+    res.json('Rota Raiz do Projeto Prefeituras e Funcionários Encontrada!!!');
+    console.log('Rota Raiz do Projeto Prefeituras e Funcionários Encontrada!!!');
 
 }
 

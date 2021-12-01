@@ -3,7 +3,7 @@ import './Rodape.css';
 export default function Rodape() {
   return (
     <div className = "rodape">
-        <h1>Rodape</h1>
+        <h1>Realizado por Airlene Antonelli - Fatec-Franca - 5o ADS - Manhã</h1>
       
     </div>
   );
