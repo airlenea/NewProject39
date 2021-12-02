@@ -1,9 +1,10 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Link } from 'react-router-dom';
 
-import AreaDados from '../AreaDados/AreaDados.js'
+/*import AreaDados from '../AreaDados/AreaDados.js'
 import Funcionarios from '../Funcionarios/Funcionarios.js';
 import MenuBotoes from '../MenuBotoes/MenuBotoes.js'
+*/
 
 import './MenuHorizontal.css';
 

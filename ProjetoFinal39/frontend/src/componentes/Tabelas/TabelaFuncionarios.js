@@ -52,7 +52,7 @@ export default function Tabela(props) {
           </tr>
         </thead>
         <tbody>
-            
+           { getLinhas()}
            
 
         </tbody>

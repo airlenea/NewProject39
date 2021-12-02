@@ -1,7 +1,7 @@
-import React from 'react';
-import ContainerGeral from '../ContainerGeral/ContainerGeral';
+import React from "react";
+import ContainerGeral from "../ContainerGeral/ContainerGeral";
 
-import './App.css';
+import "./App.css";
 
 function App() {
   return (
@@ -12,4 +12,3 @@ function App() {
 }
 
 export default App;
-
